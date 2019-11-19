@@ -1,0 +1,78 @@
+/* 重置的样式 */
+/* 为了兼容旧版的webkit内核浏览器 以及其他内核浏览器 需要一个浏览器前缀的设置*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+}
+html {
+  font-size: 12.5vw;
+}
+body {
+  font-size: 14px;
+  font-family: "Microsoft YaHei", Helvetica, sans-serif;
+  color: #666;
+}
+ol,
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+a:hover {
+  color: #333;
+}
+input,
+textarea {
+  outline: none;
+  resize: none;
+}
+table {
+  border-collapse: collapse;
+}
+i,
+em {
+  font-style: normal;
+}
+strong,
+b {
+  font-weight: normal;
+}
+/*  公用的样式 */
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+}
+@font-face {
+  font-family: JDZhengHT-EN-Bold;
+  src: url(font/JDZhengHei_01_Bold.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}

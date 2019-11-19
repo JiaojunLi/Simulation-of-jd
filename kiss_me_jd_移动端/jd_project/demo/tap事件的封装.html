@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+</body>
+<script src="tap.js"></script>
+<script>
+    // touchstart  touchmove touchend  touchcancel 
+    // 移动端原生没有一个完成的点按事件  click: 完整的点击 默认300ms延迟   用户体验不好
+
+    // 点按事件 tap 延迟要短/快    中间不能有滑动
+    var oBox = document.querySelector('#box');
+    // oBox.addEventListener('touchstart', function() {
+    //     console.log('手指开始触摸啦');
+
+    // })
+    // oBox.addEventListener('touchmove', function() {
+    //     console.log('手指正在滑动');
+
+    // })
+    // oBox.addEventListener('touchend', function() {
+    //     console.log('手指离开屏幕啦');
+
+    // })
+
+    // oBox.addEventListener('click', function() {
+    //     console.log('点击啦');
+
+    // })
+
+    // tap() 响应时间要快  300ms   150ms   中间不能有滑动 
+    tap(oBox, function(e) {
+        console.log(this);
+        console.log(e); // 利用的touchend的事件对象
+
+        console.log('哈哈 自定义的tap事件触发啦');
+
+    });
+
+    // function tap(obj, callback) {
+    //     let isMove = false;
+    //     let startTime = 0;
+    //     // 1 严格判断一下dom元素是否存在 并且是一个对象
+    //     if (obj && typeof obj === 'object') {
+    //         obj.addEventListener('touchstart', function() {
+    //             // 当手指按下的时候 计时
+    //             startTime = Date.now()
+    //         })
+    //         obj.addEventListener('touchmove', function() {
+    //             isMove = true;
+
+    //         })
+    //         obj.addEventListener('touchend', function(e) {
+    //             // console.log('手指离开屏幕啦');
+    //             if (!isMove && (Date.now() - startTime) < 150) {
+    //                 // 这就是一个完整的点按事件
+    //                 // 调用回调函数
+    //                 (typeof callback == 'function') && callback.call(obj, e)
+    //             }
+    //         })
+
+    //     }
+
+    // }
+</script>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            display: block;
+        }
+        
+        #box2 {
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="http://www.baidu.com" id="box1">百度一下</a>
+    <div id="box2"></div>
+</body>
+<!-- <script src="tap.js"></script> -->
+<!-- <script src="zepto.js"></script> -->
+<script src="fastclick.js"></script>
+<script>
+    var oBox1 = document.querySelector('#box1');
+    var oBox2 = document.querySelector('#box2');
+
+    // 使用这个插件中的一个构造函数FastClick 下面的一个方法 attach 绑定dom元素
+    // 当前绑定的元素以及内部子元素 都可以提高单击click的响应时间
+    FastClick.attach(document.body);
+
+    // click 事件  延迟 300ms
+
+    oBox2.addEventListener('touchend', function() {
+        // 让当前的盒子隐藏
+        oBox2.style.display = 'none';
+    })
+
+    // tap(oBox2, function() {
+    //     oBox2.style.display = 'none';
+    // })
+
+    // $('#box2').on('tap', function() {
+    //     $(this).hide();
+    // });
+
+
+    // 点透问题： 解决方法1: 尽量把click事件换成别的事件 
+    // 解决方法2: zepto.js   tap事件 它解决了点透问题
+    // 解决方法3: fastClick.js 小的插件  专门用来解决点透问题 （能够提高click响应时间）
+    // 这个插件内部的原理：它会模拟一个click事件 当你点击的时候 它会快速先触发它内部模拟的click事件，会把在稍后执行的真正的click阻止掉
+
+    // oBox1.addEventListener('click', function() {
+    //     console.log('触发我click事件啦 哈哈');
+
+    // });
+</script>
+
+</html>

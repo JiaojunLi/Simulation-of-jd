@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 指定网页的内容编码格式 utf-8 -->
+    <meta charset="UTF-8">
+    <!-- 视口设置：
+    width=device-width 让当前的可视区域的宽度等于设备的逻辑像素宽
+    initial-scale=1.0 初始化的缩放比例为1  不缩放
+    user-scalable=no 禁止用户缩放
+    viewport-fit=cover 针对移动苹果手机前刘海问题
+
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <!-- 专门针对IE 8 进行的优化  IE：edge 在IE8下 会以IE的最高浏览器edge模式进行渲染 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 设置当前网页进行缓存  缓存的最大时间 为180s -->
+    <meta http-equiv="Cache-Control" content="max-age=180">
+    <!-- 设置苹果手机的菜单栏不显示 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 设置苹果手机的状态栏样式为黑色  -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- 苹果设备上 一些连续数字 会被自动识别为手机号 点击可以拨打  所以禁用掉 -->
+    <meta name="format-detection" content="telephone=no">
+    <!-- dns预获取 可以把当前页面的域名对应的ip进行解析之后缓存起来
+    下一次用户点击连接反复加载的时候 不会再进行解析了 加快访问速度 -->
+    <link rel="dns-prefetch" href="//m.360buyimg.com">
+    <title>kiss-me的京东项目</title>
+    <link rel="stylesheet" href="css/index.css">
+    <!-- 引入网站图标 jpeg png .ico -->
+    <link rel="shortcut icon" type="images/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <!-- 头部搜索区域 -->
+    <header>
+        <div class="header_con">
+            <a href="javascript:;" class="menu"></a>
+            <div class="header_search">
+                <i class="jd_icon"></i>
+                <i class="line"></i>
+                <i class="search_icon"></i>
+                <!-- 搜索框 -->
+                <input class="search_con" type="search" placeholder="百雀羚套装">
+            </div>
+            <a href="javascript:;" class="login">登录</a>
+        </div>
+    </header>
+    <!-- 轮播区域 -->
+    <div class="banner">
+        <!-- 轮播 -->
+        <ul class="lunbo clearfix">
+            <li>
+                <a href="javascript:;"><img src="img/banner1.dpg" alt=""></a>
+            </li>
+            <li>
+                <a href="javascript:;"><img src="img/banner2.dpg" alt=""></a>
+            </li>
+            <li>
+                <a href="javascript:;"><img src="img/banner3.dpg" alt=""></a>
+            </li>
+            <li>
+                <a href="javascript:;"><img src="img/banner4.jpeg" alt=""></a>
+            </li>
+        </ul>
+        <!-- 导航小方块 -->
+        <div class="nav">
+            <ol class="nav_con clearfix">
+                <li></li>
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </div>
+    </div>
+    <!-- 广告区域 -->
+    <section class="jd_ad">
+        <a href="javascript:;">
+            <img src="https://m.360buyimg.com/mobilecms/jfs/t1/91734/5/2381/102866/5dceaceeEdd151713/9cda57f34bbd6750.gif"
+                alt="">
+        </a>
+    </section>
+    <!-- 商品导航列表 -->
+    <div class="nav_list">
+        <div class="nav_list_wrap clearfix">
+            <div class="nav_list_con">
+                <section>
+                    <a href="javascript:;">
+                        <!-- 图标 -->
+                        <span></span>
+                        <!-- 文字 -->
+                        <span>京东超市</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>数码电器</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>京东服饰</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>京东生鲜</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>京东到家</span>
+                    </a>
+                </section>
+                <section>
+                    <a href="javascript:;">
+                        <!-- 图标 -->
+                        <span></span>
+                        <!-- 文字 -->
+                        <span>京东超市</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>数码电器</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>京东服饰</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>京东生鲜</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>京东到家</span>
+                    </a>
+                </section>
+            </div>
+            <div class="nav_list_con">
+                <section>
+                    <a href="javascript:;">
+                        <!-- 图标 -->
+                        <span></span>
+                        <!-- 文字 -->
+                        <span>京东超市</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>数码电器</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>京东服饰</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>京东生鲜</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>京东到家</span>
+                    </a>
+                </section>
+                <section>
+                    <a href="javascript:;">
+                        <!-- 图标 -->
+                        <span></span>
+                        <!-- 文字 -->
+                        <span>京东超市</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>数码电器</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>京东服饰</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>京东生鲜</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>京东到家</span>
+                    </a>
+                </section>
+            </div>
+        </div>
+        <nav class="nav_list_square clearfix">
+            <a href="javascript:;" class="active"></a>
+            <a href="javascript:;"></a>
+        </nav>
+    </div>
+    <!-- 京东秒杀 -->
+    <section class="jd_kill">
+        <div class="title clearfix">
+            <!-- 京东秒杀图片 -->
+            <h3></h3>
+            <strong>16点场</strong>
+            <div class="time clearfix">
+                <div>00</div>
+                <span>:</span>
+                <div>17</div>
+                <span>:</span>
+                <div>13</div>
+            </div>
+            <a href="javascript:;" class="more clearfix">
+                更多秒杀
+                <i></i>
+            </a>
+        </div>
+        <div class="con">
+            <ul class="goods_list clearfix">
+                <li>
+                    <a href="javascript:;">
+                        <img src="img/jdms_pic1.png" alt="">
+                    </a>
+                    <div class="text">
+                        <p class="price"><span>&yen;</span>599</p>
+                        <p class="oldPrice">980</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="img/jdms_pic2.png" alt="">
+                    </a>
+                    <div class="text">
+                        <p class="price"><span>&yen;</span>15599</p>
+                        <p class="oldPrice">17899</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="img/jdms_pci3.dpg" alt="">
+                    </a>
+                    <div class="text">
+                        <p class="price"><span>&yen;</span>23.6</p>
+                        <p class="oldPrice">59.9</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="img/jdms_pic4.dpg" alt="">
+                    </a>
+                    <div class="text">
+                        <p class="price"><span>&yen;</span>2750</p>
+                        <p class="oldPrice">3200</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="img/jdms_pic5.dpg" alt="">
+                    </a>
+                    <div class="text">
+                        <p class="price"><span>&yen;</span>816</p>
+                        <p class="oldPrice">996</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- 广告 -->
+    <section class="new_ad clearfix">
+        <a href="javascript:;">
+            <img src="img/new_pic1.dpg" alt="">
+        </a>
+        <a href="javascript:;">
+            <img src="img/new_pic2.dpg" alt="">
+        </a>
+    </section>
+    <!-- 广告2 -->
+    <section class="ad2 clearfix">
+        <a href="javascript:;">
+            <img src="img/ad_pic1.dpg" alt="">
+        </a>
+        <a href="javascript:;">
+            <img src="img/ad_pic2.dpg" alt="">
+        </a>
+        <a href="javascript:;">
+            <img src="img/ad_pic3.dpg" alt="">
+        </a>
+    </section>
+    <!-- 走心推荐 -->
+    <section class="zxtj_title">
+        <img src="img/zxtj.dpg" alt="">
+    </section>
+    <section class="zxtj clearfix">
+        <a href="javascript:;">
+            <p>轻松上分</p>
+            <img src="img/zxtj_img1.dpg" alt="">
+            <p>王者吃鸡</p>
+        </a>
+        <a href="javascript:;">
+            <p>掌上健康</p>
+            <img src="https://m.360buyimg.com/mobilecms/s240x240_jfs/t17689/292/1247919821/159809/1c87eb05/5ac1eae4Nce7c8b00.jpg!q70.jpg.dpg"
+                alt="">
+            <p>健康管理</p>
+        </a>
+        <a href="javascript:;">
+            <p>女靴榜</p>
+            <img src="https://m.360buyimg.com/n1/s240x240_jfs/t1/71711/1/11694/100217/5d918fc2E5fd4868a/fb1a3ca05247b162.jpg!q70.jpg.dpg"
+                alt="">
+            <p>热卖尖货</p>
+        </a>
+        <a href="javascript:;">
+            <p>飞常有趣</p>
+            <img src="https://m.360buyimg.com/mobilecms/s240x240_jfs/t1/26518/7/1383/212174/5c11fa6cE44c7e876/a0be7ed30a4652dc.jpg!q70.jpg.dpg"
+                alt="">
+            <p>飞利浦</p>
+        </a>
+    </section>
+    <!-- 精选会场 -->
+    <section class="zxtj_title">
+        <img src="img/jxhc.dpg" alt="">
+    </section>
+    <section class="jxhc clearfix">
+        <a href="javascript:;">
+            <img src="img/jxhc_img1.dpg" alt="">
+            <p>满199减100</p>
+            <p>京东超市</p>
+        </a>
+        <a href="javascript:;">
+            <img src="img/jxhc_img2.dpg" alt="">
+            <p>游戏本4999起</p>
+            <p>电脑数码</p>
+        </a>
+        <a href="javascript:;">
+            <img src="img/jxhc_img3.dpg" alt="">
+            <p>5折限量抢</p>
+            <p>潮流小电</p>
+        </a>
+        <a href="javascript:;">
+            <img src="img/jxhc_img4.dpg" alt="">
+            <p>抢1111神券</p>
+            <p>手机大返场</p>
+        </a>
+        <a href="javascript:;">
+            <img src="img/jxhc_img5.dpg" alt="">
+            <p>下单享8折</p>
+            <p>潮流鞋靴</p>
+        </a>
+        <a href="javascript:;">
+            <img src="img/jxhc_img6.dpg" alt="">
+            <p>3件7折叠享券</p>
+            <p>品质内衣</p>
+        </a>
+        <a href="javascript:;">
+            <img src="img/jxhc_img7.dpg" alt="">
+            <p>每满400减50</p>
+            <p>品质家具</p>
+        </a>
+        <a href="javascript:;">
+            <img src="img/jxhc_img8.dpg" alt="">
+            <p>9.9元购车品</p>
+            <p>车品好货</p>
+        </a>
+        <a href="javascript:;">
+            <img src="img/jxhc_img9.dpg" alt="">
+            <p>神券5折起</p>
+            <p>超市神券</p>
+        </a>
+        <a href="javascript:;">
+            <img src="img/jxhc_img10.dpg" alt="">
+            <p>在意的好书</p>
+            <p>新书大赏</p>
+        </a>
+        <a href="javascript:;">
+            <img src="img/jxhc_img11.dpg" alt="">
+            <p>领劵149减100</p>
+            <p>个人护理</p>
+        </a>
+        <a href="javascript:;">
+            <img src="img/jxhc_img12.dpg" alt="">
+            <p>每满100减50</p>
+            <p>京东图书</p>
+        </a>
+
+    </section>
+    <!-- 东家小院 -->
+    <section class="zxtj_title">
+        <img src="img/djxy_title_bg.dpg" alt="">
+    </section>
+    <section class="djxy">
+        <div class="top_con clearfix">
+            <div class="goods">
+                <span>职场精英</span>
+                <p>成为同事们关注点焦点</p>
+                <div class="img clearfix">
+                    <img src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/45705/28/1742/211915/5cf7b9d6E3139fd2c/5ad0891f18b8be5f.jpg!q70.jpg.dpg"
+                        alt="">
+                    <img src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/60674/17/699/173816/5cee4fc6E8dbdcf07/f554af2bb97fbbf0.jpg!q70.jpg.dpg"
+                        alt="">
+                </div>
+            </div>
+            <div class="goods">
+                <span>野营探险</span>
+                <p>旅游探险户外穿越</p>
+                <div class="img clearfix">
+                    <img src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/51966/17/15753/292900/5dca41bcE95d29fe2/7642e70bc8df9eeb.jpg!q70.jpg.dpg"
+                        alt="">
+                    <img src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/11702/39/12793/162093/5c949769E06c55ba5/9b2116d3b1b4cdac.jpg!q70.jpg.dpg"
+                        alt="">
+                </div>
+            </div>
+        </div>
+        <div class="btm_con clearfix">
+            <a href="javascript:;">
+                <span>精品书架</span>
+                <p>书架推荐</p>
+                <img src="img/djxy_btm_img1.dpg" alt="">
+            </a>
+            <a href="javascript:;">
+                <span>炫裤出游</span>
+                <p>瞬息超干爽</p>
+                <img src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/80191/5/15370/446491/5dcbc69eEcc284c0b/04d87b89506c4620.jpg!q70.jpg.dpg"
+                    alt="">
+            </a>
+            <a href="javascript:;">
+                <span>美发食谱</span>
+                <p>秀发坚韧</p>
+                <img src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/55114/34/15479/273130/5dc93003Eb3fb3ad1/2ad05b2548853ad0.jpg!q70.jpg.dpg"
+                    alt="">
+            </a>
+            <a href="javascript:;">
+                <span>品质生活</span>
+                <p>轻奢家具</p>
+                <img src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/40189/17/1128/488597/5cbc0ae4E9c486566/c7dba2b85ac5ba67.jpg!q70.jpg.dpg"
+                    alt="">
+            </a>
+        </div>
+    </section>
+    <!-- 每日逛 -->
+    <section class="zxtj_title">
+        <img src="img/mrg_title_bg.dpg" alt="">
+    </section>
+    <section class="mrg clearfix">
+        <a href="javascript:;">
+            <span>免息星球</span>
+            <p>白条免息购</p>
+            <img src="https://m.360buyimg.com/n1/s150x150_jfs/t29566/227/1464891645/10350/a5b133e2/5ce20cdcNd9cdd972.jpg!q70.jpg.dpg"
+                alt="">
+        </a>
+        <a href="javascript:;">
+            <span>品牌闪购</span>
+            <p>享品质好物</p>
+            <img src="https://m.360buyimg.com/n1/s150x150_jfs/t18976/165/1692305863/44149/24aa32b5/5ad41016N9ad0a198.png!q70.jpg.dpg"
+                alt="">
+        </a>
+        <a href="javascript:;">
+            <span>品牌秒杀</span>
+            <p>低价抢大牌</p>
+            <img src="https://m.360buyimg.com/n1/s150x150_jfs/t1/94265/24/1899/102965/5dc6efeaEa65736ce/6a83639430709117.jpg!q70.jpg.dpg"
+                alt="">
+        </a>
+        <a href="javascript:;">
+            <span>京东直播</span>
+            <p>边看边买</p>
+            <img src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/79087/9/714/26464/5cef9636Ea4fe2ba8/90f1c44b1b1f6e2e.png!q70.jpg.dpg"
+                alt="">
+        </a>
+        <a href="javascript:;">
+            <span>排行榜</span>
+            <p>热销推荐</p>
+            <img src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/56939/39/1210/59272/5cefa52dE2f70588a/3174a20e743edd49.png!q70.jpg.dpg"
+                alt="">
+        </a>
+        <a href="javascript:;">
+            <span>拍拍好物</span>
+            <p>二手优品</p>
+            <img src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/34938/26/11155/70774/5cefa0c6E5a90edb2/47b686712510d44e.png!q70.jpg.dpg"
+                alt="">
+        </a>
+        <a href="javascript:;">
+            <span>新品首发</span>
+            <p>京东小魔方</p>
+            <img src="https://m.360buyimg.com/n1/s150x150_jfs/t11128/25/2817168750/9187/72b53c/5cdaa568N8f652eb8.jpg!q70.jpg.dpg"
+                alt="">
+        </a>
+        <a href="javascript:;">
+            <span>发现好货</span>
+            <p>教你买买买</p>
+            <img src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/50174/30/1230/9784/5cef98bfE318f8d24/4720dc4079dd568b.jpg!q70.jpg.dpg"
+                alt="">
+        </a>
+    </section>
+    <!-- 京东快报 -->
+    <section class="jdkb clearfix">
+        <h4></h4>
+        <ul>
+            <li><a href="javascript:;"><span>热门</span>GTX 1080 Ti销量上涨，RTX 20系列遇冷否</a></li>
+            <li><a href="javascript:;"><span>HOT</span>男人用半个月工资，买一块名表值不值得？</a></li>
+            <li><a href="javascript:;"><span>最新</span>三千元手机和一千元的手机差别在哪？</a></li>
+            <li><a href="javascript:;"><span>推荐</span>预算两千足够了！搭载苹果A12芯片iPad适合入手</a></li>
+        </ul>
+        <a href="javascript:;" class="more">更多</a>
+    </section>
+    <!-- 为你推荐 -->
+    <section class="zxtj_title wntj_title">
+        <img src="img/wntj_bg.png" alt="">
+    </section>
+    <section class="wntj clearfix">
+        <a href="javascript:;">
+            <img src="https://img14.360buyimg.com/mobilecms/s372x372_jfs/t1/48885/25/15707/125567/5dc98c1fE06943ab2/dcf6d7011a4920b8.jpg!q70.dpg.webp"
+                alt="">
+            <p>智力快车 儿童早教机wifi安卓版宝宝学习机可视频聊天故事机AR智能机器人0-3-6岁可充电幼儿玩具 旗舰版【课本同步+远程控制】</p>
+            <div class="text clearfix">
+                <span><i>&yen;</i>1099</span>
+                <div class="newPro">满减</div>
+                <div class="look">看相似</div>
+            </div>
+        </a>
+        <a href="javascript:;">
+            <img src="https://img10.360buyimg.com/mobilecms/s372x372_jfs/t1/85851/17/2050/303083/5dc9f44aEdc6021dd/41bbd30733812579.jpg!q70.dpg.webp"
+                alt="">
+            <p>棉拖鞋男士家用2019新款居家室内保暖厚底毛绒防滑家居拖鞋男冬季 藏青【拖鞋】 36</p>
+            <div class="text clearfix">
+                <span><i>&yen;</i>58</span>
+                <div class="newPro">新品</div>
+                <div class="look">看相似</div>
+            </div>
+        </a>
+        <a href="javascript:;">
+            <img src="https://img14.360buyimg.com/mobilecms/s372x372_jfs/t1/75861/29/758/168917/5cef7617Ed922fa1e/f3ce5cbebcc3481e.jpg!q70.dpg.webp"
+                alt="">
+            <p>前行者游戏背光发光牧马人真机械手感键盘鼠标套装lol键鼠台式有线薄膜网吧外设电脑笔记本USB外接键盘 牧马人黑色彩虹背光键盘+七彩黑鼠标</p>
+            <div class="text clearfix">
+                <span><i>&yen;</i>199</span>
+                <div class="look">看相似</div>
+            </div>
+        </a>
+        <a href="javascript:;">
+            <img src="https://img10.360buyimg.com/mobilecms/s372x372_jfs/t1/68861/24/14659/334179/5dbfedcbE84b99e59/fe0291cf95afd420.jpg!q70.dpg.webp"
+                alt="">
+            <p>安踏 ANTA官方旗舰 92715521 新款女子跑步鞋 休闲时尚轻便耐磨休闲运动鞋 黑/安踏白 6.5(女37.5)</p>
+            <div class="text clearfix">
+                <span><i>&yen;</i>1099</span>
+                <div class="look">看相似</div>
+            </div>
+        </a>
+        <a href="javascript:;">
+            <img src="https://img14.360buyimg.com/mobilecms/s372x372_jfs/t1/48740/16/5202/182573/5d2c8f08Ed8be2b3c/8d82a979ca75fcf7.jpg!q70.dpg.webp"
+                alt="">
+            <p>Δ ω【京选特惠】望远镜高倍高清夜视户外手人体一万米单筒手机拍照演唱会儿童 HD超清版90X90+手机夹+超稳三脚架</p>
+            <div class="text clearfix">
+                <span><i>&yen;</i>218</span>
+                <div class="newPro">满减</div>
+                <div class="look">看相似</div>
+            </div>
+        </a>
+        <a href="javascript:;">
+            <img src="https://img13.360buyimg.com/mobilecms/s372x372_jfs/t1/89854/24/2078/173129/5dca2609E6121a846/d156d396e992b8d2.jpg!q70.dpg.webp"
+                alt="">
+            <p>96年高粱白 山西库存粮食老酒53度450ml厂家直销 3瓶 </p>
+            <div class="text clearfix">
+                <span><i>&yen;</i>135</span>
+                <div class="look">看相似</div>
+            </div>
+        </a>
+        <a href="javascript:;">
+            <img src="https://img12.360buyimg.com/mobilecms/s372x372_jfs/t1/54422/27/9599/203441/5d6e7397E02b3127a/7edaf14aa798ac5c.jpg!q70.dpg.webp"
+                alt="">
+            <p>家用男士精品盒装电镀哑铃10-30公斤可调节杠铃哑铃两用健身器材 不带胶套盒装哑铃 锁螺母20公斤精品盒装哑铃9大好礼(可做杠铃)</p>
+            <div class="text clearfix">
+                <span><i>&yen;</i>435</span>
+                <div class="newPro">新品</div>
+                <div class="look">看相似</div>
+            </div>
+        </a>
+        <a href="javascript:;">
+            <img src="https://img11.360buyimg.com/mobilecms/s372x372_jfs/t1/47270/21/12606/372160/5d993c26E99d6ee6f/85a8edbbf5fa48c4.jpg!q70.dpg.webp"
+                alt="">
+            <p>女鞋秋季2019新款内增高黑色运动鞋女百搭休闲鞋ins潮网红老爹鞋 黑色加绒 35</p>
+            <div class="text clearfix">
+                <span><i>&yen;</i>326</span>
+                <div class="newPro">新品</div>
+                <div class="look">看相似</div>
+            </div>
+        </a>
+    </section>
+    <!-- 底部通栏 -->
+    <nav class="nav_bar">
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+    </nav>
+    <!-- 返回顶部 -->
+    <a href="javascript:;" class="goTop"></a>
+</body>
+<!-- <script>
+    // rem的设置 iphone5 320  iphoneX 414  盖世5 360
+    var iW = document.documentElement.clientWidth;
+    // 采用京东的设置
+    iW = iW > 1080 ? 1080 : iW;
+    document.querySelector('html').style.fontSize = iW / 8 + 'px';
+</script> -->
+<script src="js/zepto.js"></script>
+<script src="js/index.js"></script>
+
+</html>

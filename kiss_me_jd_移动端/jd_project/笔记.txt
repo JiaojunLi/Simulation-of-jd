@@ -1,0 +1,145 @@
+webApp: 京东的移动端首页
+
+布局方案： rem  + flex-box  + 浮动 + 定位 + 百分比 + 固定像素
+
+css---less / scss （css的预编译语言）
+
+一 分析页面结构
+
+  1 搜索区域
+
+      header   (左右定位 中间百分比  整体使用固定像素)
+              z-index:2
+          header_con
+              a  
+
+              div 
+                 图标1  i
+                 图标2  i
+                 搜索框 input
+
+              a 
+
+  2 轮播图区域
+    div.banner (相对定位) 
+        
+        ul  绝对定位 100% *10 z-index:3
+          li 10% 
+                a  圆角 左右外边距 overflow:hidden
+                    img 
+
+        div.nav 绝对定位  z-index:4
+            ol > li*4  .active  
+
+
+  3 商品导航列表  flex-box
+    div.nav_list 100% overflow:hidden
+    
+         div.wrap  200%
+              div.nav_list_con :flex
+                  section: display:flex
+                      a * 5 :flex:1 displau:flex
+                          span  图标
+                          span  文字
+                  section 
+
+              div.nav_list_con
+
+  4 广告
+
+  5 京东秒杀区域
+
+      section.jd_kill
+          div.title
+              h3 
+              strong
+              div.time
+                  div 
+                  span 
+                  div
+                  span 
+                  div 
+              a 
+                i 
+
+
+          div.con
+             ul  
+                li 
+                   a 
+                      img
+                   div.text
+                       p 
+                          span  
+                       p
+               
+               京东的自己的字体
+
+psd: 尽量还原效果图 将误差控制在1px之内
+
+
+  6 广告  
+     section.new_ad clearfix
+        a  float: left  w: 50% 
+           img: w:100% 
+
+     section.ad2: display:flex
+           
+         a   flex:1
+            img width:100% display:block
+
+  7 走心推荐
+    section 
+       a   width: 24.5%  margin: 0.25%
+           背景图 
+            p 加粗 字体大小
+
+            img 
+
+            p
+
+
+  8 精选会场
+      section.jxhc  clearfix
+          a  25%  float
+             img
+             p 
+             p
+
+  9 东家小院
+
+  10 每日逛
+
+  11 京东快报
+
+  12 为你推荐
+
+  另外 有一个底部通栏  还有一个返回顶部的按钮
+
+二  目录结构
+   
+   css 
+   js
+   img
+   index.html
+
+   live-server 本地服务器 实时刷新预览
+
+三 基本搭建
+   样式重置 reset.css （重置的样式 公用的样式写一下） 
+   index.css  
+   index.html 页面 基本设置做好（头部meta 常规设置  视口设置）
+
+
+
+移动端点透问题
+封装一个自定义的tap事件
+
+zepto 库 基本使用  ===》 
+zepto 原生js轮播图 ===》 zepto无缝轮播
+如何定制zepto  
+
+iscroll插件 下拉刷新  上拉滚动加载
+
+
+
