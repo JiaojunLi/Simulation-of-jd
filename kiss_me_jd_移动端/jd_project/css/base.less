@@ -1,0 +1,99 @@
+// 这个文件用来写一些 重置的样式 和公用的样式
+/* 重置的样式 */
+@jd_Color: #e43130;
+@bj_Color: #f6f6f6;
+@color: #333;
+
+/* 为了兼容旧版的webkit内核浏览器 以及其他内核浏览器 需要一个浏览器前缀的设置*/
+// 混入
+.prefix(@attr,@val) {
+  @{attr}: @val;
+  -webkit-@{attr}: @val;
+  -moz-@{attr}: @val;
+  -ms-@{attr}: @val;
+  -o-@{attr}: @val;
+}
+
+*,::after,::before {
+  margin: 0;
+  padding: 0;
+  // 将盒模型属性设置为border-box 让元素的宽高以边框开始计算
+  .prefix(box-sizing,border-box);
+  //在移动端的webkit内核浏览器下 点击a链接会出现高亮的一个显示
+  -webkit-tap-highlight-color: transparent;
+  // 把一些默认的控件 select 按钮 等外观样式设置为无
+  .prefix(appearance, none);
+}
+
+html {
+  // iphon5  320  / 8 40px
+  // 40px      1vw  3.2px  1
+  font-size: 12.5vw;
+}
+
+body {
+  font-size: 14px;
+  // 先识别微软雅黑字体   如果没有则识别后面的字体 设备默认字体
+  font-family: "Microsoft YaHei", Helvetica,sans-serif;
+  color: #666;
+  background-color: @bj_Color;
+  padding-bottom: 43px;
+}
+
+ol,ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: @color;
+  &:hover {
+    color: @color;
+  }
+}
+
+input,textarea {
+  outline: none;
+  resize:none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+i,em {
+  font-style: normal;
+}
+strong,b {
+  font-weight: normal;
+}
+
+/*  公用的样式 */
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+// 清除浮动
+.clearfix {
+  zoom: 1;
+  &:after {
+    display: block;
+    content: "";
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+    visibility: hidden;
+  }
+}
+
+// 京东自己的字体
+@font-face {
+  font-family: JDZhengHT-EN-Bold;
+  src: url(./font/JDZhengHei_01_Bold.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal
+}
+
+
+

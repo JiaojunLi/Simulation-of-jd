@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var arr = ["刘备", "关羽", "张飞"]; // 删除  添加  修改
+
+    // 参数1 开始删除的位置 参数2 删除的个数  参数3 需要添加的元素
+
+    // Array.prototype.splice = function() {
+
+    // }
+
+
+    // var ret = arr.splice();
+    // console.log(arr);
+    // console.log(ret);
+
+    Array.prototype.slice = function(start = 0, end = this.length) {
+        var arr = [];
+        for (var i = start; i < end; i++) {
+            arr.push(this[i]);
+        }
+        return arr;
+    }
+
+
+
+    Array.prototype.splice = function(arg1 = 0, arg2 = 0, ...args) {
+        var returnArr = [];
+        var oldArr = [];
+        if (arg1 >= this.length) return returnArr;
+        // 删除的元素存入数据返回
+        for (var i = 0; i < arg2; i++) this[arg1 + i] && (returnArr[returnArr.length] = this[arg1 + i]);
+        // 拿到删除位置之前的所有元素
+        for (var i = 0; i < arg1; i++) oldArr[oldArr.length] = this[i];
+        // 添加需要添加的新元素
+        for (var i = 0; i < args.length; i++) oldArr[oldArr.length] = args[i];
+        // 拿到删除位置之后的所有元素
+        for (var i = (arg1 + arg2); i < this.length; i++) oldArr[oldArr.length] = this[i];
+        // 确保this地址不变 循环赋值
+        this.length = 0;
+        for (var i = 0; i < oldArr.length; i++) this[i] = oldArr[i];
+        return returnArr;
+    }
+
+    var arr = ["刘备", "关羽", "张飞", "赵云", "周瑜"];
+    var arr2 = arr;
+
+
+    var ret = arr.splice(3, 0, "xiixi", true);
+    console.log(arr);
+    console.log(arr2);
+
+    console.log(ret);
+</script>
+
+</html>

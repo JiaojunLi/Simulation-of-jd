@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 指定网页的内容编码格式 utf-8 -->
+    <meta charset="UTF-8">
+    <!-- 视口设置：
+    width=device-width 让当前的可视区域的宽度等于设备的逻辑像素宽
+    initial-scale=1.0 初始化的缩放比例为1  不缩放
+    user-scalable=no 禁止用户缩放
+    viewport-fit=cover 针对移动苹果手机前刘海问题
+
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <!-- 专门针对IE 8 进行的优化  IE：edge 在IE8下 会以IE的最高浏览器edge模式进行渲染 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 设置当前网页进行缓存  缓存的最大时间 为180s -->
+    <meta http-equiv="Cache-Control" content="max-age=180">
+    <!-- 设置苹果手机的菜单栏不显示 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 设置苹果手机的状态栏样式为黑色  -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- 苹果设备上 一些连续数字 会被自动识别为手机号 点击可以拨打  所以禁用掉 -->
+    <meta name="format-detection" content="telephone=no">
+    <!-- dns预获取 可以把当前页面的域名对应的ip进行解析之后缓存起来
+    下一次用户点击连接反复加载的时候 不会再进行解析了 加快访问速度 -->
+    <link rel="dns-prefetch" href="//m.360buyimg.com">
+    <title>京东项目</title>
+    <link rel="stylesheet" href="css/index.css">
+    <!-- 引入网站图标 jpeg png .ico -->
+    <link rel="shortcut icon" type="images/x-icon" href="http://localhost:8080/favicon.ico">
+</head>
+
+<body>
+    <!-- 头部搜索区域 -->
+    <header>
+        <div class="header_con">
+            <a href="javascript:;" class="menu"></a>
+            <div class="header_search">
+                <i class="jd_icon"></i>
+                <i class="line"></i>
+                <i class="search_icon"></i>
+                <!-- 搜索框 -->
+                <input class="search_con" type="search" placeholder="百雀羚套装">
+            </div>
+            <a href="javascript:;" class="login">登录</a>
+        </div>
+    </header>
+    <!-- 轮播区域 -->
+    <div class="banner">
+        <!-- 轮播 -->
+        <ul class="lunbo clearfix">
+            <li>
+                <a href="javascript:;"><img src="img/banner1.dpg" alt=""></a>
+            </li>
+            <li>
+                <a href="javascript:;"><img src="img/banner2.dpg" alt=""></a>
+            </li>
+            <li>
+                <a href="javascript:;"><img src="img/banner3.dpg" alt=""></a>
+            </li>
+            <li>
+                <a href="javascript:;"><img src="img/banner4.jpeg" alt=""></a>
+            </li>
+        </ul>
+        <!-- 导航小方块 -->
+        <div class="nav">
+            <ol class="nav_con clearfix">
+                <li></li>
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </div>
+    </div>
+    <!-- 商品导航列表 -->
+    <div class="nav_list">
+        <div class="nav_list_wrap clearfix">
+            <div class="nav_list_con">
+                <section>
+                    <a href="javascript:;">
+                        <!-- 图标 -->
+                        <span></span>
+                        <!-- 文字 -->
+                        <span>京东超市</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>数码电器</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>京东服饰</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>京东生鲜</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>京东到家</span>
+                    </a>
+                </section>
+                <section>
+                    <a href="javascript:;">
+                        <!-- 图标 -->
+                        <span></span>
+                        <!-- 文字 -->
+                        <span>京东超市</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>数码电器</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>京东服饰</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>京东生鲜</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>京东到家</span>
+                    </a>
+                </section>
+            </div>
+            <div class="nav_list_con">
+                <section>
+                    <a href="javascript:;">
+                        <!-- 图标 -->
+                        <span></span>
+                        <!-- 文字 -->
+                        <span>京东超市</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>数码电器</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>京东服饰</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>京东生鲜</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>京东到家</span>
+                    </a>
+                </section>
+                <section>
+                    <a href="javascript:;">
+                        <!-- 图标 -->
+                        <span></span>
+                        <!-- 文字 -->
+                        <span>京东超市</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>数码电器</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>京东服饰</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>京东生鲜</span>
+                    </a>
+                    <a href="javascript:;">
+                        <span></span>
+                        <span>京东到家</span>
+                    </a>
+                </section>
+            </div>
+        </div>
+        <nav class="nav_list_square clearfix">
+            <a href="javascript:;" class="active"></a>
+            <a href="javascript:;"></a>
+        </nav>
+    </div>
+    <!-- 广告区域 -->
+    <section class="jd_ad">
+        <a href="javascript:;">
+            <img src="img/jd_ad.webp" alt="">
+        </a>
+    </section>
+    <!-- 京东秒杀 -->
+    <section class="jd_kill">
+        <div class="title clearfix">
+            <!-- 京东秒杀图片 -->
+            <h3></h3>
+            <strong>16点场</strong>
+            <div class="time clearfix">
+                <div>00</div>
+                <span>:</span>
+                <div>17</div>
+                <span>:</span>
+                <div>13</div>
+            </div>
+            <a href="javascript:;" class="more clearfix">
+                更多秒杀
+                <i></i>
+            </a>
+        </div>
+        <div class="con">
+            <ul class="goods_list clearfix">
+                <li>
+                    <a href="javascript:;">
+                        <img src="img/jdms_pic1.png" alt="">
+                    </a>
+                    <div class="text">
+                        <p class="price"><span>&yen;</span>599</p>
+                        <p class="oldPrice">980</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="img/jdms_pic2.png" alt="">
+                    </a>
+                    <div class="text">
+                        <p class="price"><span>&yen;</span>15599</p>
+                        <p class="oldPrice">17899</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="img/jdms_pci3.dpg" alt="">
+                    </a>
+                    <div class="text">
+                        <p class="price"><span>&yen;</span>23.6</p>
+                        <p class="oldPrice">59.9</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="img/jdms_pic4.dpg" alt="">
+                    </a>
+                    <div class="text">
+                        <p class="price"><span>&yen;</span>2750</p>
+                        <p class="oldPrice">3200</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="img/jdms_pic5.dpg" alt="">
+                    </a>
+                    <div class="text">
+                        <p class="price"><span>&yen;</span>816</p>
+                        <p class="oldPrice">996</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- 广告 -->
+    <section class="new_ad clearfix">
+        <a href="javascript:;">
+            <img src="img/new_pic1.dpg" alt="">
+        </a>
+        <a href="javascript:;">
+            <img src="img/new_pic2.dpg" alt="">
+        </a>
+    </section>
+    <!-- 广告2 -->
+    <section class="ad2 clearfix">
+        <a href="javascript:;">
+            <img src="img/ad_pic1.dpg" alt="">
+        </a>
+        <a href="javascript:;">
+            <img src="img/ad_pic2.dpg" alt="">
+        </a>
+        <a href="javascript:;">
+            <img src="img/ad_pic3.dpg" alt="">
+        </a>
+    </section>
+    <!-- 走心推荐 -->
+    <section class="zxtj_title">
+        <img src="img/zxtj.dpg" alt="">
+    </section>
+    <section class="zxtj clearfix">
+        <a href="javascript:;">
+            <p>猪牛羊肉榜</p>
+            <img src="img/zxtj_img1.dpg" alt="">
+            <p>热卖尖货</p>
+        </a>
+        <a href="javascript:;">
+            <p>护肤套装榜</p>
+            <img src="img/zxtj_img2.dpg" alt="">
+            <p>人气好物</p>
+        </a>
+        <a href="javascript:;">
+            <p>轻松上分</p>
+            <img src="img/zxtj_img3.dpg" alt="">
+            <p>王者吃鸡</p>
+        </a>
+        <a href="javascript:;">
+            <p>飞常有趣</p>
+            <img src="img/zxtj_img4.dpg" alt="">
+            <p>飞利浦电视</p>
+        </a>
+    </section>
+    <!-- 精选会场 -->
+    <section class="zxtj_title">
+        <img src="img/jxhc.dpg" alt="">
+    </section>
+    <section class="jxhc clearfix">
+        <a href="javascript:;">
+            <img src="img/jxhc_img1.dpg" alt="">
+            <p>满199减100</p>
+            <p>京东超市</p>
+        </a>
+        <a href="javascript:;">
+            <img src="img/jxhc_img2.dpg" alt="">
+            <p>游戏本4999起</p>
+            <p>电脑数码</p>
+        </a>
+        <a href="javascript:;">
+            <img src="img/jxhc_img3.dpg" alt="">
+            <p>5折限量抢</p>
+            <p>潮流小电</p>
+        </a>
+        <a href="javascript:;">
+            <img src="img/jxhc_img4.dpg" alt="">
+            <p>抢1111神券</p>
+            <p>手机大返场</p>
+        </a>
+        <a href="javascript:;">
+            <img src="img/jxhc_img5.dpg" alt="">
+            <p>下单享8折</p>
+            <p>潮流鞋靴</p>
+        </a>
+        <a href="javascript:;">
+            <img src="img/jxhc_img6.dpg" alt="">
+            <p>3件7折叠享券</p>
+            <p>品质内衣</p>
+        </a>
+        <a href="javascript:;">
+            <img src="img/jxhc_img7.dpg" alt="">
+            <p>每满400减50</p>
+            <p>品质家具</p>
+        </a>
+        <a href="javascript:;">
+            <img src="img/jxhc_img8.dpg" alt="">
+            <p>9.9元购车品</p>
+            <p>车品好货</p>
+        </a>
+        <a href="javascript:;">
+            <img src="img/jxhc_img9.dpg" alt="">
+            <p>神券5折起</p>
+            <p>超市神券</p>
+        </a>
+        <a href="javascript:;">
+            <img src="img/jxhc_img10.dpg" alt="">
+            <p>在意的好书</p>
+            <p>新书大赏</p>
+        </a>
+        <a href="javascript:;">
+            <img src="img/jxhc_img11.dpg" alt="">
+            <p>领劵149减100</p>
+            <p>个人护理</p>
+        </a>
+        <a href="javascript:;">
+            <img src="img/jxhc_img12.dpg" alt="">
+            <p>每满100减50</p>
+            <p>京东图书</p>
+        </a>
+
+    </section>
+
+    <!-- 东家小院 -->
+    <section class="zxtj_title">
+        <img src="img/djxy_title_bg.dpg" alt="">
+    </section>
+    <section class="djxy">
+        <div class="top_con clearfix">
+            <div class="goods">
+                <span>面部护理</span>
+                <p>秋冬面部护肤</p>
+                <div class="img clearfix">
+                    <img src="img/djxy_img1.dpg" alt="">
+                    <img src="img/djxy_img2.dpg" alt="">
+                </div>
+            </div>
+            <div class="goods">
+                <span>面部护理</span>
+                <p>秋冬面部护肤</p>
+                <div class="img clearfix">
+                    <img src="img/djxy_img1.dpg" alt="">
+                    <img src="img/djxy_img2.dpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="btm_con clearfix">
+            <a href="javascript:;">
+                <span>精品书架</span>
+                <p>书架推荐</p>
+                <img src="img/djxy_btm_img1.dpg" alt="">
+            </a>
+            <a href="javascript:;">
+                <span>炫酷出游</span>
+                <p>瞬吸超干爽</p>
+                <img src="img/djxy_btm_img2.dpg" alt="">
+            </a>
+            <a href="javascript:;">
+                <span>美发食谱</span>
+                <p>秀发强韧</p>
+                <img src="img/djxy_btm_img3.dpg" alt="">
+            </a>
+            <a href="javascript:;">
+                <span>品质生活</span>
+                <p>轻奢家具</p>
+                <img src="img/djxy_btm_img4.dpg" alt="">
+            </a>
+        </div>
+    </section>
+    <!-- 每日逛 -->
+    <section class="zxtj_title">
+        <img src="img/mrg_title_bg.dpg" alt="">
+    </section>
+    <section class="mrg clearfix">
+        <a href="javascript:;">
+            <span>免息星球</span>
+            <p>白条免息购</p>
+            <img src="img/mrg_img1.dpg" alt="">
+        </a>
+        <a href="javascript:;">
+            <span>品牌闪购</span>
+            <p>享品牌好物</p>
+            <img src="img/mrg_img2.dpg" alt="">
+        </a>
+        <a href="javascript:;">
+            <span>品牌秒杀</span>
+            <p>低价抢大牌</p>
+            <img src="img/mrg_img3.dpg" alt="">
+        </a>
+        <a href="javascript:;">
+            <span>新品首发</span>
+            <p>京东小魔方</p>
+            <img src="img/mrg_img4.dpg" alt="">
+        </a>
+        <a href="javascript:;">
+            <span>京东直播</span>
+            <p>边看边买</p>
+            <img src="img/mrg_img5.dpg" alt="">
+        </a>
+        <a href="javascript:;">
+            <span>排行榜</span>
+            <p>专属购物指南</p>
+            <img src="img/mrg_img6.dpg" alt="">
+        </a>
+        <a href="javascript:;">
+            <span>拍拍好物</span>
+            <p>二手优品</p>
+            <img src="img/mrg_img7.dpg" alt="">
+        </a>
+        <a href="javascript:;">
+            <span>新品秀发</span>
+            <p>发现品质生活</p>
+            <img src="img/mrg_img8.dpg" alt="">
+        </a>
+    </section>
+    <!-- 京东快报 -->
+    <section class="jdkb clearfix">
+        <h4></h4>
+        <ul>
+            <li><a href="javascript:;"><span>热门</span>GTX 1080 Ti销量上涨，RTX 20系列遇冷否</a></li>
+            <li><a href="javascript:;"><span>HOT</span>男人用半个月工资，买一块名表值不值得？</a></li>
+            <li><a href="javascript:;"><span>推荐</span>三千元手机和一千元的手机差别在哪？</a></li>
+            <li><a href="javascript:;"><span>最新</span>预算两千足够了！搭载苹果A12芯片iPad适合入手</a></li>
+        </ul>
+        <a href="javascript:;" class="more">更多</a>
+    </section>
+    <!-- 为你推荐 -->
+    <section class="zxtj_title wntj_title">
+        <img src="img/wntj_bg.png" alt="">
+    </section>
+    <section class="wntj clearfix">
+        <a href="javascript:;">
+            <img src="img/product1.webp" alt="">
+            <p>鞋男士运动休闲鞋子皮面防水男鞋秋冬季学生运动跑步鞋黑色运动鞋官方旗舰店网鞋男旅游鞋子 热卖爆款5516(皮面) 8.5(42)</p>
+            <div class="text clearfix">
+                <span><i>&yen;</i>169</span>
+                <div class="look">看相似</div>
+            </div>
+        </a>
+        <a href="javascript:;">
+            <img src="img/product1.webp" alt="">
+            <p>鞋男士运动休闲鞋子皮面防水男鞋秋冬季学生运动跑步鞋黑色运动鞋官方旗舰店网鞋男旅游鞋子 热卖爆款5516(皮面) 8.5(42)</p>
+            <div class="text">
+                <span><i>&yen;</i>169</span>
+                <div class="newPro">新品</div>
+                <div class="look">看相似</div>
+            </div>
+        </a>
+        <a href="javascript:;">
+            <img src="img/product1.webp" alt="">
+            <p>鞋男士运动休闲鞋子皮面防水男鞋秋冬季学生运动跑步鞋黑色运动鞋官方旗舰店网鞋男旅游鞋子 热卖爆款5516(皮面) 8.5(42)</p>
+            <div class="text clearfix">
+                <span><i>&yen;</i>169</span>
+                <div class="look">看相似</div>
+            </div>
+        </a>
+        <a href="javascript:;">
+            <img src="img/product1.webp" alt="">
+            <p>鞋男士运动休闲鞋子皮面防水男鞋秋冬季学生运动跑步鞋黑色运动鞋官方旗舰店网鞋男旅游鞋子 热卖爆款5516(皮面) 8.5(42)</p>
+            <div class="text">
+                <span><i>&yen;</i>169</span>
+                <div class="newPro">新品</div>
+                <div class="look">看相似</div>
+            </div>
+        </a>
+        <a href="javascript:;">
+            <img src="img/product1.webp" alt="">
+            <p>鞋男士运动休闲鞋子皮面防水男鞋秋冬季学生运动跑步鞋黑色运动鞋官方旗舰店网鞋男旅游鞋子 热卖爆款5516(皮面) 8.5(42)</p>
+            <div class="text clearfix">
+                <span><i>&yen;</i>169</span>
+                <div class="look">看相似</div>
+            </div>
+        </a>
+        <a href="javascript:;">
+            <img src="img/product1.webp" alt="">
+            <p>鞋男士运动休闲鞋子皮面防水男鞋秋冬季学生运动跑步鞋黑色运动鞋官方旗舰店网鞋男旅游鞋子 热卖爆款5516(皮面) 8.5(42)</p>
+            <div class="text">
+                <span><i>&yen;</i>169</span>
+                <div class="newPro">新品</div>
+                <div class="look">看相似</div>
+            </div>
+        </a>
+    </section>
+    <!-- 底部通栏 -->
+    <nav class="nav_bar">
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+    </nav>
+    <!-- 返回顶部 -->
+    <a href="javascript:;" class="goTop"></a>
+</body>
+<script>
+    // rem的设置 iphone5 320  iphoneX 414  盖世5 360
+    // var iW = document.documentElement.clientWidth;
+    // // 采用京东的设置
+    // iW = iW > 1080 ? 1080 : iW;
+    // document.querySelector('html').style.fontSize = iW / 8 + 'px';
+</script>
+<script src="js/zepto.js"></script>
+<script src="js/index.js"></script>
+
+</html>

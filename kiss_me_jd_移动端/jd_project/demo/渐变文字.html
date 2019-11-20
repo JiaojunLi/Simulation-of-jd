@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span {
+            font-size: 50px;
+            font-weight: bold;
+            background: linear-gradient( to right, blue, aqua);
+            /* 背景裁切 */
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        
+        div {
+            width: 400px;
+            height: 300px;
+            border: 10px dotted red;
+            padding: 30px;
+            background: url(1-big.jpg) no-repeat;
+            /* background-clip: border-box; */
+            /* background-clip: content-box; */
+            /* background-clip: padding-box; */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- background-clip: -->
+    <div></div>
+
+    <!-- 测试渐变文字 -->
+    <span>
+        前端开发工程师
+    </span>
+</body>
+
+</html>

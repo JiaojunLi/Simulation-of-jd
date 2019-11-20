@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+        }
+        
+        section {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">这是盒子</div>
+    <section>
+        哈哈
+    </section>
+</body>
+<!-- <script src="./node_modules/zepto/dist/zepto.js"></script>
+<script src="./node_modules/zepto/src/fx.js"></script>
+<script src="./node_modules/zepto/src/fx_methods.js"></script>
+<script src="./node_modules/zepto/src/touch.js"></script> -->
+
+<script src="zepto.js"></script>
+<!-- 1 操作繁琐  2 多一次文件引入 多一次http请求 -->
+<script>
+    // zepto js的库  适合现代化浏览器的小巧的库   使用的api大部分和jquery类似   属于模块化定制  默认这个文件中包含5个模块
+    // 如果需要引入别的功能 则需要引入对应的模块
+    // $ zepto 没有解决冲突的方法  jquery有  noCaflict()
+
+    $('#box').css({
+        width: 200,
+        height: 200,
+        backgroundColor: "green"
+    });
+
+    $('#box').on("tap", function() {
+        console.log(123);
+
+        $('#box').animate({
+            width: 400,
+            height: 300,
+            backgroundColor: "blue"
+        }, 2000);
+    })
+
+
+
+    $('section').eq(0).on('tap', function() {
+        $(this).fadeOut(2000);
+    });
+</script>
+
+</html>

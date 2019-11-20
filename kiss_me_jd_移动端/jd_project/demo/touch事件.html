@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+</body>
+<script>
+    // click  单击事件   这个事件是有延迟  200ms~300ms 
+    //  为了区分 两次单击 还是 一次双击  移动端用户体验不好
+    // touch相关事件   
+    // touchstart  当手指触碰屏幕的时候触发  
+    // touchmove  当手指在屏幕上移动/滑动的时候触发
+    // touchend  当手指触碰屏幕离开的时候会触发该事件
+    // touchcancel 当手指触碰屏幕的时候突然系统其他程序中断啦
+    // addEventListener()来绑定
+
+    // e touchEvent事件对象下
+    //手指集合列表 里面触发当前事件的手指的个数 length 下标
+    // changedTouches: 当前touch事件触发前后手指的变化 能够存下来 事件前后变化的手指事件
+    // touches: 触发该事件的时候 当前页面中所有的手指个数
+    // targetTouches: 触发该事件的时候 当前目标元素身上的手指个数
+    var oBox = document.querySelector('#box');
+
+    oBox.addEventListener('touchstart', function(e) {
+        console.log(e);
+        console.log(e.targetTouches[0].clientX);
+        console.log(e.targetTouches[0].clientY);
+
+        console.log('手指开始触碰屏幕啦');
+
+    });
+    oBox.addEventListener('touchmove', function() {
+        console.log('手指在屏幕上进行移动/滑动啦');
+
+    });
+    oBox.addEventListener('touchend', function() {
+        console.log('手指离开屏幕啦');
+
+    })
+
+    oBox.addEventListener('touchcancel', function() {
+        console.log('手指触碰屏幕中断啦');
+
+    })
+
+    oBox.addEventListener('click', function() {
+        console.log('单击事件触发啦');
+
+    })
+
+    // var timer = setTimeout(function() {
+    //     alert('哈哈哈 我弹出啦');
+    // }, 5000);
+</script>
+
+</html>

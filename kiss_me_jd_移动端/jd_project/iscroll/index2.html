@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* 给所有的元素添加touch-action 当触发touch事件的时候 不执行任何操作
+            在触发垂直touch事件的时候 不会导致水平方向或者浏览器的其他默认行为的干扰 */
+            touch-action: none;
+        }
+        
+        html,
+        body {
+            height: 100%;
+        }
+        
+        #main {
+            text-align: center;
+            overflow: hidden;
+            border: 1px solid black;
+            height: 100%;
+        }
+        
+        #wrapper p img {
+            width: 20px;
+            display: none;
+        }
+        
+        #wrapper ul li {
+            line-height: 40px;
+        }
+        
+        header,
+        footer {
+            position: fixed;
+            width: 100%;
+            left: 0;
+            height: 50px;
+            background-color: #ccc;
+            text-align: center;
+            line-height: 50px;
+            z-index: 2;
+        }
+        
+        header {
+            top: 0;
+        }
+        
+        footer {
+            bottom: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- <header>朋友圈</header> -->
+    <div id="main">
+        <div id="wrapper">
+            <p class="refresh"><img src="loading.gif" alt=""><span>下拉刷新</span> </p>
+            <ul>
+                <li>这是第01个数据内容</li>
+                <li>这是第02个数据内容</li>
+                <li>这是第03个数据内容</li>
+                <li>这是第04个数据内容</li>
+                <li>这是第05个数据内容</li>
+                <li>这是第06个数据内容</li>
+                <li>这是第07个数据内容</li>
+                <li>这是第08个数据内容</li>
+                <li>这是第09个数据内容</li>
+                <li>这是第10个数据内容</li>
+                <li>这是第11个数据内容</li>
+                <li>这是第12个数据内容</li>
+                <li>这是第13个数据内容</li>
+                <li>这是第14个数据内容</li>
+                <li>这是第15个数据内容</li>
+                <li>这是第16个数据内容</li>
+                <li>这是第17个数据内容</li>
+                <li>这是第18个数据内容</li>
+                <li>这是第19个数据内容</li>
+                <li>这是第20个数据内容</li>
+                <li>这是第09个数据内容</li>
+                <li>这是第10个数据内容</li>
+                <li>这是第11个数据内容</li>
+                <li>这是第12个数据内容</li>
+                <li>这是第13个数据内容</li>
+                <li>这是第14个数据内容</li>
+                <li>这是第15个数据内容</li>
+                <li>这是第16个数据内容</li>
+                <li>这是第17个数据内容</li>
+                <li>这是第18个数据内容</li>
+                <li>这是第19个数据内容</li>
+                <li>这是第20个数据内容</li>
+            </ul>
+            <p class="add_data"><img src="loading.gif" alt=""><span>上拉滚动加载</span> </p>
+        </div>
+    </div>
+    <!-- <footer>底部通栏</footer> -->
+</body>
+<script src="iscroll-probe.js"></script>
+<script>
+    // 执行插件的初始化
+    var iscroll = new IScroll('#main', {
+        // scrollbars: true, // 显示滚动条
+        // mouseWheel: true, // 实现鼠标滚动控制滚动
+        probeType: 2, // 当前插件 监测滚动事件 的触发频率   1 当滚动不繁忙的时候进行监测 （触发频率最少）  
+        //  2  每间隔一段时间 进行监测 （原生的scroll 触发频率相同）  3 像素级别的检测（每滚动一个像素就检测一次） 性能消耗较高   
+        // fadeScrollbars: true
+    });
+
+    // iscroll对象身上有几个滚动事件
+    // scrollStart 开始滚动的时候触发
+    // scroll 滚动的时候触发
+    // scrollEnd 滚动结束之后触发
+    // iscroll.on('scrollStart', function() {
+    //     console.log('开始滚动啦');
+
+    // })
+
+
+    iscroll.on('scroll', function() {
+        // console.log('持续滚动');
+        // console.log(this.y);
+        // 下拉刷新
+        if (this.y > 80) {
+            console.log(this.y);
+
+            console.log('当前可以进行刷新啦');
+            // 加个标记 在停止滚动的时候进行刷新
+            document.querySelector('.refresh').classList.add('loading');
+            // 让图片显示出来
+            document.querySelector('.refresh img').style.display = 'inline-block';
+        }
+
+        // 滚动加载
+        // this.y向上滚动的距离 +  可视区域的高度  -  内容的实际高度  > 80 触发滚动加载
+        var iH = document.documentElement.clientHeight;
+        var conH = document.querySelector('#wrapper').offsetHeight;
+        console.log(iH, conH);
+
+        if ((Math.abs(this.y) + iH - conH) > 80) {
+            console.log('这个时候应该滚动加载啦');
+            console.log(this.y);
+            // 滚动加载
+            // 加个标记 在停止滚动的时候进行刷新
+            document.querySelector('.add_data').classList.add('loading');
+            document.querySelector('.add_data img').style.display = 'inline-block';
+        }
+
+
+    })
+
+    iscroll.on('scrollEnd', function() {
+        console.log('结束滚动');
+        if (document.querySelector('.refresh').classList.contains('loading')) {
+            // 下拉刷新
+            // 这里应该发起ajax请求
+            setTimeout(function() {
+                // 数据拿到 页面渲染
+                // 让loading图去掉 把标记去掉
+                document.querySelector('.refresh').classList.remove('loading');
+                // 让图片显示出来
+                document.querySelector('.refresh img').style.display = 'none';
+
+            }, 2000);
+        }
+        if (document.querySelector('.add_data').classList.contains('loading')) {
+            // 滚动加载
+            // 这里应该发起ajax请求
+            // 加个标记 在停止滚动的时候进行刷新
+            setTimeout(function() {
+                // 数据拿到
+                // 让loading图去掉 把标记去掉
+                document.querySelector('.add_data').classList.remove('loading');
+                document.querySelector('.add_data img').style.display = 'none';
+            }, 2000);
+
+        }
+
+    })
+</script>
+<script>
+</script>
+
+</html>
